@@ -1,0 +1,1 @@
+g95  -Wall -fbounds-check -g -ftrace=full -ftr15581 -std=f95  -Wunused-parameter

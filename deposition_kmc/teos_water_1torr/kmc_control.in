@@ -1,0 +1,13 @@
+  void_crit    0.035   
+  P_SiOC2H54      1333.22375                
+  del_nlist     5.0   Angstroms
+  rverlet       5.0   Angstroms
+  NRELAX        50     
+  Hmax        500.0   Angstroms       
+  ipconfig    1  
+  make_movie    .true. 1
+  Hydrothermal  .false.
+  n_try_void    5
+  n_try_Henry   5
+  fover_henry   0.8
+  

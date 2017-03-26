@@ -1,0 +1,62 @@
+MODULE pdb2xyz_conn_mod
+   USE precision_mod
+   USE global_vars
+   USE files_mod
+   USE connectivity_mod
+   IMPLICIT NONE
+   SAVE
+   integer,parameter :: maxlnt = 132
+   character(len=*),parameter :: fmtt = '(a132)'
+   character(len=maxlnt) :: line
+   integer :: istart,lnt
+   public:: getword,getline,line,istart,lnt
+
+CONTAINS
+
+   SUBROUTINE getline(iu,ios)
+      integer,intent(in) :: iu
+      integer,intent(out):: ios
+      line = ''
+      read(unit=iu,fmt=fmtt,iostat=ios) line
+      if(ios /= 0)return
+      istart = 1
+      lnt = len_trim(line)
+   END SUBROUTINE getline
+
+   
+   SUBROUTINE getword(word,ios)
+      character(len=*),intent(out) :: word
+      integer,intent(out):: ios
+      integer :: i,iend,i1
+      ios = 0
+      word(:)=''
+      if(istart > lnt)then
+         ios = -1
+         return
+      end if
+      i1 = 0
+      do i = istart,lnt
+         if(line(i:i) /= ' ')then
+            i1 = i
+            exit
+         end if
+      end do
+      if(i1 == 0) then
+         ios = -2
+         return
+      end if
+      iend = 1
+      do i = i1+1,lnt
+         if(line(i:i) == ' ' .or. i == lnt)then
+            iend = i
+            exit
+         end if
+      end do
+      if (i1 >= lnt) iend = i1
+      word(1:iend-i1+1) = line(i1:iend)
+      istart = i+1
+      return
+   END SUBROUTINE  getword
+
+END MODULE pdb2xyz_conn_mod
+

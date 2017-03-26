@@ -1,0 +1,6 @@
+g95 commands
+for debugging use:
+g95 -o  henry_cube.exe  henry_cube.f90 -c -g -I. -fmod=mod -ftrace=full
+for final runs use
+g95 -o  henry_cube.exe  henry_cube.f90 -O3 -I.
+

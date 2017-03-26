@@ -1,0 +1,525 @@
+ select  3 , 1011
+ wireframe off
+ select  7 , 1025
+ wireframe off
+ select  7 , 1028
+ wireframe off
+ select  11 , 1041
+ wireframe off
+ select  30 , 1120
+ wireframe off
+ select  39 , 1152
+ wireframe off
+ select  39 , 1154
+ wireframe off
+ select  67 , 1262
+ wireframe off
+ select  76 , 1295
+ wireframe off
+ select  81 , 1316
+ wireframe off
+ select  82 , 1319
+ wireframe off
+ select  85 , 1331
+ wireframe off
+ select  86 , 1042
+ wireframe off
+ select  86 , 1101
+ wireframe off
+ select  96 , 1371
+ wireframe off
+ select  99 , 1382
+ wireframe off
+ select  107 , 1408
+ wireframe off
+ select  110 , 1421
+ wireframe off
+ select  115 , 1435
+ wireframe off
+ select  117 , 1418
+ wireframe off
+ select  119 , 1450
+ wireframe off
+ select  119 , 1451
+ wireframe off
+ select  135 , 1506
+ wireframe off
+ select  149 , 1554
+ wireframe off
+ select  149 , 1555
+ wireframe off
+ select  176 , 1641
+ wireframe off
+ select  186 , 1318
+ wireframe off
+ select  188 , 1682
+ wireframe off
+ select  188 , 1683
+ wireframe off
+ select  191 , 1636
+ wireframe off
+ select  191 , 1689
+ wireframe off
+ select  194 , 1698
+ wireframe off
+ select  196 , 1702
+ wireframe off
+ select  199 , 1710
+ wireframe off
+ select  199 , 1713
+ wireframe off
+ select  212 , 1748
+ wireframe off
+ select  216 , 1744
+ wireframe off
+ select  218 , 1765
+ wireframe off
+ select  225 , 1788
+ wireframe off
+ select  231 , 1809
+ wireframe off
+ select  231 , 1810
+ wireframe off
+ select  236 , 1279
+ wireframe off
+ select  237 , 1825
+ wireframe off
+ select  240 , 1403
+ wireframe off
+ select  240 , 1833
+ wireframe off
+ select  241 , 1834
+ wireframe off
+ select  241 , 1835
+ wireframe off
+ select  242 , 1837
+ wireframe off
+ select  242 , 1838
+ wireframe off
+ select  249 , 1860
+ wireframe off
+ select  249 , 1863
+ wireframe off
+ select  255 , 1882
+ wireframe off
+ select  255 , 1883
+ wireframe off
+ select  257 , 1421
+ wireframe off
+ select  263 , 1908
+ wireframe off
+ select  264 , 1583
+ wireframe off
+ select  264 , 1910
+ wireframe off
+ select  265 , 1914
+ wireframe off
+ select  268 , 1924
+ wireframe off
+ select  272 , 1333
+ wireframe off
+ select  272 , 1935
+ wireframe off
+ select  275 , 1515
+ wireframe off
+ select  275 , 1907
+ wireframe off
+ select  275 , 1941
+ wireframe off
+ select  279 , 1955
+ wireframe off
+ select  293 , 1887
+ wireframe off
+ select  295 , 2001
+ wireframe off
+ select  297 , 2004
+ wireframe off
+ select  297 , 2006
+ wireframe off
+ select  298 , 2007
+ wireframe off
+ select  299 , 1715
+ wireframe off
+ select  304 , 2026
+ wireframe off
+ select  304 , 2029
+ wireframe off
+ select  313 , 2056
+ wireframe off
+ select  313 , 2058
+ wireframe off
+ select  319 , 2078
+ wireframe off
+ select  324 , 2093
+ wireframe off
+ select  328 , 1495
+ wireframe off
+ select  331 , 2114
+ wireframe off
+ select  334 , 1493
+ wireframe off
+ select  334 , 2123
+ wireframe off
+ select  341 , 2138
+ wireframe off
+ select  347 , 1974
+ wireframe off
+ select  355 , 2182
+ wireframe off
+ select  355 , 2183
+ wireframe off
+ select  356 , 2184
+ wireframe off
+ select  365 , 1296
+ wireframe off
+ select  365 , 1638
+ wireframe off
+ select  367 , 2215
+ wireframe off
+ select  374 , 2234
+ wireframe off
+ select  375 , 2238
+ wireframe off
+ select  378 , 2245
+ wireframe off
+ select  383 , 2255
+ wireframe off
+ select  383 , 2257
+ wireframe off
+ select  386 , 2262
+ wireframe off
+ select  389 , 2272
+ wireframe off
+ select  392 , 2279
+ wireframe off
+ select  399 , 1806
+ wireframe off
+ select  405 , 1562
+ wireframe off
+ select  415 , 2264
+ wireframe off
+ select  415 , 2335
+ wireframe off
+ select  416 , 2244
+ wireframe off
+ select  417 , 2340
+ wireframe off
+ select  422 , 2352
+ wireframe off
+ select  438 , 2084
+ wireframe off
+ select  446 , 2403
+ wireframe off
+ select  452 , 2416
+ wireframe off
+ select  459 , 2237
+ wireframe off
+ select  459 , 2433
+ wireframe off
+ select  461 , 2437
+ wireframe off
+ select  469 , 2457
+ wireframe off
+ select  471 , 2410
+ wireframe off
+ select  471 , 2461
+ wireframe off
+ select  476 , 1302
+ wireframe off
+ select  477 , 2476
+ wireframe off
+ select  477 , 2478
+ wireframe off
+ select  479 , 1573
+ wireframe off
+ select  480 , 1736
+ wireframe off
+ select  480 , 2481
+ wireframe off
+ select  485 , 2494
+ wireframe off
+ select  485 , 2495
+ wireframe off
+ select  485 , 2496
+ wireframe off
+ select  491 , 2336
+ wireframe off
+ select  491 , 2504
+ wireframe off
+ select  493 , 2341
+ wireframe off
+ select  495 , 1772
+ wireframe off
+ select  512 , 1691
+ wireframe off
+ select  512 , 2495
+ wireframe off
+ select  515 , 2549
+ wireframe off
+ select  531 , 1089
+ wireframe off
+ select  534 , 1252
+ wireframe off
+ select  536 , 2585
+ wireframe off
+ select  538 , 2589
+ wireframe off
+ select  539 , 1899
+ wireframe off
+ select  539 , 2578
+ wireframe off
+ select  540 , 2591
+ wireframe off
+ select  540 , 2593
+ wireframe off
+ select  542 , 2501
+ wireframe off
+ select  545 , 2603
+ wireframe off
+ select  546 , 1928
+ wireframe off
+ select  551 , 2614
+ wireframe off
+ select  563 , 1380
+ wireframe off
+ select  564 , 1461
+ wireframe off
+ select  566 , 2632
+ wireframe off
+ select  570 , 2643
+ wireframe off
+ select  572 , 1708
+ wireframe off
+ select  572 , 2650
+ wireframe off
+ select  574 , 2038
+ wireframe off
+ select  574 , 2652
+ wireframe off
+ select  576 , 2415
+ wireframe off
+ select  577 , 1549
+ wireframe off
+ select  579 , 1639
+ wireframe off
+ select  579 , 1793
+ wireframe off
+ select  584 , 1481
+ wireframe off
+ select  590 , 2020
+ wireframe off
+ select  593 , 1278
+ wireframe off
+ select  599 , 1582
+ wireframe off
+ select  599 , 2515
+ wireframe off
+ select  612 , 2712
+ wireframe off
+ select  615 , 1539
+ wireframe off
+ select  619 , 2721
+ wireframe off
+ select  622 , 2727
+ wireframe off
+ select  623 , 1391
+ wireframe off
+ select  627 , 1977
+ wireframe off
+ select  633 , 2741
+ wireframe off
+ select  634 , 2743
+ wireframe off
+ select  638 , 2747
+ wireframe off
+ select  638 , 2749
+ wireframe off
+ select  644 , 2758
+ wireframe off
+ select  654 , 1740
+ wireframe off
+ select  654 , 2773
+ wireframe off
+ select  660 , 2436
+ wireframe off
+ select  660 , 2779
+ wireframe off
+ select  664 , 2056
+ wireframe off
+ select  664 , 2782
+ wireframe off
+ select  667 , 1078
+ wireframe off
+ select  668 , 2728
+ wireframe off
+ select  668 , 2788
+ wireframe off
+ select  670 , 1420
+ wireframe off
+ select  670 , 2791
+ wireframe off
+ select  673 , 2374
+ wireframe off
+ select  681 , 1516
+ wireframe off
+ select  681 , 2591
+ wireframe off
+ select  685 , 2794
+ wireframe off
+ select  700 , 2825
+ wireframe off
+ select  700 , 2827
+ wireframe off
+ select  705 , 1993
+ wireframe off
+ select  718 , 1824
+ wireframe off
+ select  718 , 2850
+ wireframe off
+ select  724 , 2185
+ wireframe off
+ select  724 , 2859
+ wireframe off
+ select  745 , 2880
+ wireframe off
+ select  758 , 2870
+ wireframe off
+ select  769 , 2034
+ wireframe off
+ select  770 , 2473
+ wireframe off
+ select  774 , 2877
+ wireframe off
+ select  777 , 1044
+ wireframe off
+ select  777 , 2634
+ wireframe off
+ select  777 , 2726
+ wireframe off
+ select  785 , 2355
+ wireframe off
+ select  792 , 2847
+ wireframe off
+ select  797 , 2637
+ wireframe off
+ select  801 , 1830
+ wireframe off
+ select  807 , 1814
+ wireframe off
+ select  809 , 2622
+ wireframe off
+ select  822 , 2008
+ wireframe off
+ select  826 , 2935
+ wireframe off
+ select  831 , 2814
+ wireframe off
+ select  859 , 1154
+ wireframe off
+ select  859 , 2115
+ wireframe off
+ select  859 , 2332
+ wireframe off
+ select  862 , 1627
+ wireframe off
+ select  862 , 2104
+ wireframe off
+ select  862 , 2650
+ wireframe off
+ select  863 , 1936
+ wireframe off
+ select  863 , 2533
+ wireframe off
+ select  870 , 1366
+ wireframe off
+ select  870 , 2960
+ wireframe off
+ select  878 , 2965
+ wireframe off
+ select  893 , 1911
+ wireframe off
+ select  893 , 2837
+ wireframe off
+ select  894 , 2644
+ wireframe off
+ select  894 , 2829
+ wireframe off
+ select  895 , 2979
+ wireframe off
+ select  896 , 1236
+ wireframe off
+ select  896 , 1935
+ wireframe off
+ select  897 , 2529
+ wireframe off
+ select  903 , 2545
+ wireframe off
+ select  905 , 1095
+ wireframe off
+ select  907 , 2437
+ wireframe off
+ select  907 , 2926
+ wireframe off
+ select  912 , 1954
+ wireframe off
+ select  912 , 2375
+ wireframe off
+ select  921 , 2558
+ wireframe off
+ select  921 , 2985
+ wireframe off
+ select  924 , 1795
+ wireframe off
+ select  931 , 1038
+ wireframe off
+ select  933 , 2225
+ wireframe off
+ select  933 , 2989
+ wireframe off
+ select  934 , 2780
+ wireframe off
+ select  940 , 1594
+ wireframe off
+ select  944 , 2885
+ wireframe off
+ select  945 , 2912
+ wireframe off
+ select  948 , 2701
+ wireframe off
+ select  948 , 2992
+ wireframe off
+ select  950 , 2583
+ wireframe off
+ select  950 , 2815
+ wireframe off
+ select  956 , 2745
+ wireframe off
+ select  956 , 2825
+ wireframe off
+ select  958 , 1155
+ wireframe off
+ select  958 , 2233
+ wireframe off
+ select  968 , 1949
+ wireframe off
+ select  970 , 1565
+ wireframe off
+ select  970 , 2210
+ wireframe off
+ select  971 , 2509
+ wireframe off
+ select  971 , 2737
+ wireframe off
+ select  975 , 2943
+ wireframe off
+ select  975 , 2969
+ wireframe off
+ select  977 , 2921
+ wireframe off
+ select  977 , 2957
+ wireframe off
+ select  978 , 2858
+ wireframe off
+ select  981 , 3000
+ wireframe off
+ 

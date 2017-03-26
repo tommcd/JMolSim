@@ -1,0 +1,74 @@
+
+MODULE rand_mod
+! a random number generator (Numerical Recipies)
+! with auxillary subroutines for storing and setting the
+! state space
+   USE precision_mod, only: wp,i4b
+   implicit none
+   private
+   public:: rand,get_rand_state,set_rand_state,read_rand_state,write_rand_state
+   integer(i4b),private,save:: ix = -1, iy = -1
+   integer(i4b),public,save:: irand_seed
+!
+CONTAINS
+
+   SUBROUTINE set_rand_state(ix0,iy0)
+      integer(i4b),intent(in):: ix0,iy0
+      real(wp):: tmp
+      tmp = rand()
+      ix = ix0
+      iy = iy0
+   END SUBROUTINE set_rand_state
+
+   SUBROUTINE get_rand_state(ix0,iy0)
+      integer(i4b),intent(out):: ix0,iy0
+      ix0 = ix
+      iy0 = iy
+   END SUBROUTINE get_rand_state
+
+   SUBROUTINE read_rand_state(iu)
+      integer(i4b),intent(in):: iu
+      real(wp):: tmp
+      tmp = rand()
+      read(iu,*) ix,iy
+      rewind(iu)
+   END SUBROUTINE read_rand_state
+
+   SUBROUTINE write_rand_state(iu)
+      integer(i4b),intent(in):: iu
+      write(iu,*) ix,iy
+      call flush(iu)
+   END SUBROUTINE write_rand_state
+
+   FUNCTION rand()
+!-----random number generator
+      real(wp):: rand
+      integer(i4b),parameter::ia = 16807,im = 2147483647,iq = 127773,ir = 2836
+      integer(i4b),save:: k
+      real(wp),save::am
+      if (irand_seed <= 0 .or. iy < 0 ) then
+         am = nearest(1.0_wp, -1.0_wp)/im
+         iy = ior(ieor(888889999,abs(irand_seed)),1)
+         ix = ieor(777755555,abs(irand_seed))
+         irand_seed = abs(irand_seed) + 1
+      end if
+      ix = ieor(ix,ishft(ix,13))
+      ix = ieor(ix,ishft(ix, -17))
+      ix = ieor(ix,ishft(ix,5))
+      k = iy/iq
+      iy = ia*(iy - k*iq) - ir*k
+      if (iy < 0) iy = iy + im
+      rand = am*ior(iand(im,ieor(ix,iy)),1)
+   END FUNCTION rand
+
+! 'minimal standard' RNG
+!   FUNCTION rand0()
+!      real(wp):: rand0
+!      real(wp),parameter:: im=2147483647.0_wp,ia=16807.0_wp
+!      real(wp),parameter:: am=1.0_wp/im
+!      irand_seed = mod(ia*mod(ia*irand_seed,im),im)
+!      rand0 = am*irand_seed
+!   END FUNCTION
+
+END MODULE rand_mod
+

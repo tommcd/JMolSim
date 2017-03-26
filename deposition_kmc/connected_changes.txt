@@ -1,0 +1,115 @@
+Changes to allow rejection of connected structures.
+
+(1) In the main program after the initial structure is read in 
+    check that there is only one cluster.
+
+! How many clusters are there initially
+! There should be only ONE.
+      call Init_HKNonLattice(natom_max)
+      call HKNonLattice(natom,proximity,n_cluster,atomL)
+      n_cluster_old = n_cluster
+      write(*,*) 'n_cluster = ',n_cluster
+      if (n_cluster /= 1) stop "ncluster /= 1"
+
+
+(2) For any subroutine which carries out an event which could cause a 'floating' cluster
+    the following changes must be made: 
+    (i)  Add an INTENT(OUT) LOGICAL variable 'connectivity_failure'
+         which will be set to .TRUE. if the event must be rejected.
+    (ii) Test that the number of clusters has not changed after the move.
+         If it has (i.e. if there is a new 'floating' cluster) then set
+         connectivity_failure=.TRUE. and UNDO the move before returning to the 
+         (calling routine) main rpogram.
+
+e.g. For the water attack routine: 
+
+SUBROUTINE water_attack(SiOH4_blocked,iat,success,connectivity_failure)
+...
+      logical,intent(out):: success,
+...
+
+! BEFORE any event (reaction or switch)
+! only for debugging as n_cluster should be ONE
+      call HKNonLattice(natom,proximity,n_cluster,atomL)
+      n_cluster_old = n_cluster
+      if (n_cluster /= 1) stop "ncluster /= 1"
+! if not debugging just set n_cluster_old = 1
+      n_cluster_old = 1
+
+
+! AFTER any event (reaction or switch)
+! Check that there is still only ONE cluster
+      connectivity_failure = .FALSE.
+      call HKNonLattice(natom,proximity,n_cluster,atomL)
+      ! n_cluster_old = 1 (as originally 1 cluster)
+      if (n_cluster /= n_cluster_old) then
+         connectivity_failure = .TRUE.
+         ! either call the subroutine to UNDO the event
+         ! or GOTO the code which undoes the event 
+      end if
+
+(3) Back in the main program if an event was rejected due to a connectivity failure
+    i.e. an event subroutine returned connectivity_failure = .TRUE.
+    then that event is removed from the event table and another event selected.
+    The lines to be added/changed in the main program end in "!******"
+
+      ..... 
+      do iz = lb_rxn, Nz_top
+      do iy = 1, Ny
+      do ix = 1, Nx
+         ibin = icell(ix,iy,iz)
+         ...
+         ! reaction rates are calculated here
+         ...
+      end do
+      end do
+      end do
+
+!
+55555 CONTINUE ! Jump BACK to here if event selected below fails. !******
+      if (rate_sum == 0.0_wp) STOP 'NO REACTIONS POSSIBLE' !******
+      xi1 = rand()
+      psum = 0.0_wp
+      bin_loop: do iz = lb_rxn, Nz_top
+      do iy = 1, Ny
+      do ix = 1, Nx
+      do ir = 1, nrxn
+         psum = psum + rate(ir,ix,iy,iz)/rate_sum
+         if (psum >= xi1) then
+            ib = (/ ix,iy,iz /)
+            irxn = ir
+            exit bin_loop
+         end if
+      end do
+      end do
+      end do
+      end do bin_loop
+
+      write(*, '(i9,g18.8,i4,3i9)') kmc_step,rate_sum,irxn,ib !******
+      write(29,'(i9,g18.8,i4,3i9)') kmc_step,rate_sum,irxn,ib !******
+
+!
+!     carry out reaction irxn in bin ib
+      select case(irxn)
+      case(1) ! reaction 1
+      ...
+      case(2) ! reaction 2
+      ...
+      case(3)
+      ...
+      case(4)
+         ...
+         call water_attack(booltmp,ia_OSiO,success,connectivity_failure) !******
+         if (connectivity_failure) then                                  !******
+            rate_sum = rate_sum - rate(irxn,ib(1),ib(2),ib(3))           !******
+            rate(irxn,ib(1),ib(2),ib(3))=0.0_wp                          !******
+            GOTO 55555                                                   !******
+         end if                                                          !******
+         ...
+      end select
+
+!
+!     Advance the KMC clock
+      delta_time = -log(rand())/rate_sum
+      time = time + delta_time
+
